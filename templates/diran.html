@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Diran peak</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: rgb(0, 17, 255);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color:rgb(60, 255, 0);
+        }
+        header h1:hover {
+            color:rgb(0, 255, 26);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('static/image(11).jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 0 #000, 4px 4px 0 #555, 6px 6px 0 #aaa, 8px 8px 0 #ddd;
+        }
+        .hero h1:hover {
+            color: #007BFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.2), 6px 6px 12px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            }
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .gallery img {
+            flex: 1 1 calc(33.33% - 10px);
+            margin: 5px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #007BFF;
+        }
+    /* Cool and Amazing CSS Effects and Animations */
+    .hero h1 {
+        animation: textGlow 1.5s ease-in-out infinite alternate;
+    }
+
+   
+
+    .gallery img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .content h2 {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content h2::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #007BFF;
+        animation: slideIn 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+        to {
+        top: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+    <h1>The Diran Peak</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>The Diran Peak</h1>
+        <p>Diran Peak, standing at 7,266 meters (23,839 feet), is a pyramid-shaped mountain located in the Karakoram range of Gilgit-Baltistan, Pakistan. It is known for being one of the easier 7,000-meter peaks to climb, although it has a reputation for avalanches, making it a challenging endeavor despite its relative accessibility.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Location</h2>
+        <p>
+            <li>Diran Peak is located in the Bagrote Valley of Gilgit-Baltistan, Pakistan.</li>
+            <li>The nearest major town to Diran Peak is Gilgit, which serves as a base for trekkers and climbers.</li>
+        </p>
+        <h2>Height and Climbing History</h2>
+        <p>
+            <li>Diran Peak stands at 7,266 meters (23,839 feet) and is considered one of the easier 7,000-meter peaks to climb.</li>
+            <li>The first successful ascent of Diran Peak was in 1968 by three Austrians: Rainer Goeschl, Rudolph Pischinger, and Hanns Schell.</li>
+        </p>
+        <h2>Geography and Climate</h2>
+        <p>
+            <li>Diran Peak is a pyramid-shaped mountain with steep, snow-covered slopes.</li>
+            <li>The climate around Diran Peak is harsh and unpredictable, with avalanches being a common occurrence.</li>
+        </p>
+        <h2>Popular Trekking Routes</h2>
+        <p>
+            <li>Diran Peak is a popular destination for trekkers and climbers, with several routes available for different skill levels.</li>
+            <li>The most common route to the summit of Diran Peak is the southwest ridge, which offers a challenging but rewarding climb.</li>
+        </p>
+        <h2>Visiting Diran Peak</h2>
+        <p>
+            <li>Diran Peak is accessible via the Bagrote Highway, with the nearest major town being Gilgit.</li>
+            <li>Visitors to Diran Peak can enjoy stunning views of the surrounding Karakoram range and the Bagrote Valley.</li>
+        </p>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="static/dirn.jpg" alt="diran peak 1">
+        <img src="static/dirn1.jpg" alt="diran peak 2">
+        <img src="static/dirn 2.jpg" alt="diran peak 3">
+        <img src="static/dirn 3.jpg" alt="diran peak 4">
+        <img src="static/image (2).jpg" alt="diran peak 5">
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Bagrote Valley. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+</body>
+</html>

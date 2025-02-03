@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tour - Bagrote Valley</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #e0f7fa;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        header a:hover {
+            color: rgb(0, 255, 26);
+        }
+        header h1 {
+            font-size: 24px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        header h1:hover {
+            color: rgb(253, 253, 253);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        header h1:hover:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            }
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 30px;
+            padding-bottom: 60px;
+            background: linear-gradient(to right, #e0f7fa 0%, #80deea 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        main h1 {
+            font-size: 32px;
+            text-align: center;
+            text-decoration: underline;
+            color: black;
+            transition: color 0.3s ease;
+        }
+        main h1:hover {
+            color: blue;
+        }
+        main p {
+            font-size: 20px;
+            text-align: center;
+        }
+        form {
+            background: linear-gradient(to right, #e0f7fa 0%, #80deea 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #007BFF;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()">&#8592;</a>
+        <h1>Book Your Tour to Bagrote Valley</h1>
+    </header>
+    <main>
+        <form action="{{ url_for('register') }}" method="post">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+                <label for="package">Select Package:</label>
+                <select id="package" name="package" required>
+                    <option value="standard">Standard Package</option>
+                    <option value="premium">Premium Package</option>
+                    <option value="luxury">Luxury Package</option>
+                </select>
+                <div>
+                    <label for="payment_method">Payment Method:</label>
+                    <select id="payment_method" name="payment_method" required>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div>
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" min="1" required>
+            </div>
+            <div>
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" min="0">
+            </div>
+            <div>
+                <label for="special_requests">Special Requests:</label>
+                <textarea id="special_requests" name="special_requests"></textarea>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Bagrote Valley Tours. All rights reserved.</p>
+    </footer>
+</body>
+</html>

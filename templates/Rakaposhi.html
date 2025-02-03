@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Rakaposhi</title>
+    <style>
+        /* General Styles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+            z-index: -1;
+            pointer-events: none;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero h1::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .content h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery img {
+            filter: grayscale(50%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.1) rotate(2deg);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color:rgb(98, 255, 0);
+        }
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        header h1:hover {
+            color:rgb(55, 255, 0);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('static/rakaposhi.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: typing 5s steps(30, end) infinite, colorChange 10s infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            display: inline-block;
+        }
+        .hero h1::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 0; }
+        }
+
+        @keyframes colorChange {
+            0% { color:rgb(33, 0, 130); }
+            25% { color:rgb(240, 0, 84); }
+            50% { color:rgba(190, 8, 235, 0.87); }
+            75% { color:rgb(0, 231, 208); }
+            100% { color:rgb(255, 255, 255); }
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .hero p:hover {
+            transform: scale(1.05);
+            color:rgb(255, 213, 0);
+        }
+
+        /* Content Section */
+        /* Content Section Effects */
+        .content h2 {
+            position: relative;
+            display: inline-block;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 3px;
+            background-color: #007BFF;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .content p {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+            opacity: 0;
+            transform: translateY(20px);
+            }
+            to {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+        .content {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        /* Gallery Section */ 
+        /* Gallery Section Effects */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .gallery img {
+            flex: 1 1 calc(33.33% - 10px);
+            margin: 5px;
+            max-width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-radius: 8px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .gallery img:hover::before {
+            opacity: 1;
+        }
+
+        .gallery img::after {
+            content: attr(alt);
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .gallery img:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+    <h1>The Rakaposhi</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to the Rakaposhi Peak</h1>
+        <p>Rakaposhi Peak, standing at 7,788 meters, is the 27th highest mountain in the world and is renowned for its stunning beauty and dramatic rise over the surrounding terrain. Located in the Karakoram range of Pakistan, it offers breathtaking views and is a popular destination for trekkers and climbers alike. Here are some key details about Rakaposhi Peak</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Location and Name</h2>
+        <p>
+            <li>Rakaposhi Peak is located in the Bagrote Valley of Gilgit-Baltistan, Pakistan.</li>
+            <li>The name "Rakaposhi" is derived from the local language, meaning "Snow Covered" or "Shining Wall".</li>
+        </p>
+        <h2>Height and Climbing History</h2>
+        <p>
+            <li>Rakaposhi Peak stands at an elevation of 7,788 meters (25,551 feet).</li>
+            <li>The first successful ascent of Rakaposhi Peak was made in 1958 by a British-Pakistani expedition led by Mike Banks and Tom Patey.</li>
+        </p>
+        <h2>Geography and Climate</h2>
+        <p>
+            <li>Rakaposhi Peak is known for its steep rise over the surrounding terrain, with an elevation gain of over 5,800 meters (19,000 feet) in just 11 kilometers.</li>
+            <li>The climate around Rakaposhi Peak is characterized by cold temperatures and heavy snowfall, making it a challenging climb.</li>
+        </p>
+        <h2>Popular Trekking Routes</h2>
+        <p>
+            <li>The trek to the base camp of Rakaposhi Peak is a popular route for trekkers, offering stunning views of the mountain and surrounding valleys.</li>
+            <li>The trek to the base camp typically takes 3-4 days and is suitable for trekkers of all skill levels.</li>
+        </p>
+        <h2>Visiting Rakaposhi Peak</h2>
+        <p>
+           <li> Accessible via the Bagrote Highway, with the nearest major town being Gilgit.</li>
+
+           <li>Travelers can reach Bagrote village by a 45 mint drive from Gilgit.</li>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="static/rakaposhi (1).jpg" alt="Rakaposhi 1">
+        <img src="static/rakaposhi (2).jpg" alt="Rakaposhi 2">
+        <img src="static/rakaposhi (3).jpg" alt="Rakaposhi 3">
+        <img src="static/rakaposhi (4).jpg" alt="Rakaposhi 4">
+        <img src="static/rakaposhi (5).jpg" alt="Rakaposhi 5">
+        <img src="static/rakaposhi (6).jpg" alt="Rakaposhi 6">
+        <img src="static/rakaposhi (7).jpg" alt="Rakaposhi 7">
+        <img src="static/rakaposhi (8).jpg" alt="Rakaposhi 8">
+        <img src="static/rakaposhi (9).jpg" alt="Rakaposhi 9">
+        <img src="static/rakaposhi (10).jpg" alt="Rakaposhi 10">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Bagrote Valley. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+</body>
+</html>

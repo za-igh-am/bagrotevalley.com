@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact to Bagrote Valley</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: url('static/rro.jpg');
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+    }
+    header a {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgb(0, 17, 255);
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header a:hover {
+        background-color: rgb(255, 33, 33);
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 30px;
+        padding-bottom: 60px;
+        background: url('static/rro.jpg');
+        backdrop-filter: blur(20px);
+        
+    } 
+    
+    .container h1 {
+        font-size: 32px;
+        text-align: center;
+        text-decoration: underline;
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    .container h1:hover {
+        color: blue;
+    }
+    .container p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .container p:first-of-type {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .container p:hover {
+        color: blue;
+        text-decoration: underline;
+        
+    }
+    .social-links {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        color:rgb(0, 4, 8);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .social-links li {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .social-links li a {
+        display: block;
+        padding: 15px 20px;
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+        color: white;
+        border-radius: 50px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-links li a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-links a:hover {
+        color: blue;
+    }
+    .email-link {
+        text-align: center;
+    }
+    .email-link a {
+        color: blue;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .email-link a:hover {
+        color: rgb(0, 4, 8);
+    }
+    .box1 {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+        background: url('static/rro.jpg');
+        backdrop-filter: blur(20px);
+        
+    }
+    form {
+        margin-top: 20px;
+    }
+    form div {
+        margin-bottom: 20px;
+    }
+    form label {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    form textarea {
+        height: 100px;
+    }
+    form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    form button:hover {
+        background-color: #0056b3;
+    }
+    /* Amazing CSS Effects */
+    body {
+        animation: gradientBackground 10s infinite alternate;
+    }
+
+    @keyframes gradientBackground {
+        0% {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }
+        50% {
+            background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+        }
+        100% {
+            background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+        }
+    }
+
+    header {
+        animation: headerGlow 2s infinite alternate;
+    }
+
+    @keyframes headerGlow {
+        0% {
+            box-shadow: 0 0 10px #007bff;
+        }
+        100% {
+            box-shadow: 0 0 20px #0056b3;
+        }
+    }
+
+    .container h1 {
+        animation: textShadow 1s infinite alternate;
+    }
+
+    @keyframes textShadow {
+        0% {
+            text-shadow: 0 0 5px blue;
+        }
+        100% {
+            text-shadow: 0 0 15px blue;
+        }
+    }
+
+    .social-links li a {
+        animation: buttonPulse 1.5s infinite;
+    }
+
+    @keyframes buttonPulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    form button {
+        animation: buttonGlow 2s infinite alternate;
+    }
+
+    @keyframes buttonGlow {
+        0% {
+            box-shadow: 0 0 10px #007bff;
+        }
+        100% {
+            box-shadow: 0 0 20px #0056b3;
+        }
+    }
+    footer {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 50px;
+    }
+    footer p {
+        margin: 0;
+    }
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #007BFF;
+    }
+
+        
+  
+
+    
+
+    
+    
+
+  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <div>
+            <a href="javascript:history.back()">&#8592;</a>
+        
+        
+        
+        </div>
+    </header>
+    <div class="container">
+        <h1>Contact Bagrote Valley</h1>
+        <div class="social-links">
+            <p>Follow us on social media:</p>
+            
+            <li><a href="https://www.facebook.com/BagroteValley" target="_blank">facebook</a></li>           
+            <li><a href="https://www.instagram.com/BagroteValley" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/BagroteValley" target="_blank">X (Twitter)</a></li>
+            <li><a href="https://zaigham018.pythonanywhere.com/" target="_blank">Developer Website</a></li>
+            
+        </div>
+        <div class="email-link">
+            <p>Email us at: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+        </div>
+    </div>
+    <div class="box1">
+        <h1>We Value Your Feedback</h1>
+        <form action="/submit_feedback" method="post" onsubmit="this.reset(); return false;">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <div>
+                <label for="ideas">Future Ideas:</label>
+                <textarea id="ideas" name="ideas" rows="4"></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>© Bagrote Valley 2025. All rights reserved.</p>
+        <p>Contact us via email: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tours with Bagrote Valley</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+           
+        }
+        /* Header and Navigation */
+        header {
+            background-color: rgb(0, 17, 255);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color:rgb(9, 250, 25);
+        }
+        header h1 {
+            font-size: 24px;
+            color: #fff;
+        }
+        header h1:hover {
+            color:rgb(253, 253, 253);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        header p,h1:hover:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.3s ease;
+        }
+        /* New Animations and Cool Effects */
+        @keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+            transform: translateY(-20px);
+            opacity: 0;
+            }
+            to {
+            transform: translateY(0);
+            opacity: 1;
+            }
+        }
+
+        header {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .tour-card {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .tour-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .tour-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .tour-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .tour-card a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tour-card a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.3s ease;
+        }
+
+        .tour-card a:hover::before {
+            left: 100%;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2 {
+            text-align: center;
+            color: #333;
+
+        }
+        h1,h2:hover {
+            color: #007BFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+
+        }
+       
+        .tour-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .tour-card {
+            flex: 1 1 calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .tour-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .tour-card h3 {
+            margin: 15px 0 10px;
+            color: #007BFF;
+        }
+        .tour-card p {
+            color: #555;
+        }
+        .tour-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .tour-card a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+        <h1>TOURS WITH US</h1>
+        </header>
+        <!-- Content Section -->    
+    <div class="container">
+        <h1>Explore Bagrote Valley with Our Tours</h1>
+        <p>Discover the breathtaking beauty of Bagrote Valley with our curated tour packages. Whether you're an adventurer, a nature lover, or a cultural enthusiast, we have the perfect tour for you.</p>
+
+        <h2>Featured Tours</h2>
+        <div class="tour-section">
+            <div class="tour-card">
+                <img src="static/image (14).jpg" alt="Trekking Tour">
+                <h3>Trekking Adventure</h3>
+                <p>Experience the thrill of trekking through the stunning landscapes of Bagrote Valley. Perfect for adventure seekers!</p>
+                <a href="register.html">Book Now</a>
+            </div>
+            <div class="tour-card">
+                <img src="static/ngr (3).jpg" alt="Cultural Tour">
+                <h3>Cultural Exploration</h3>
+                <p>Immerse yourself in the rich culture and traditions of Bagrote Valley. Visit local villages and meet the friendly locals.</p>
+                <a href="register.html">Book Now</a>
+            </div>
+            <div class="tour-card">
+                <img src="static/image(7).jpg" alt="Nature Tour">
+                <h3>Nature Retreat</h3>
+                <p>Relax and rejuvenate in the serene beauty of Bagrote Valley. Enjoy the lush meadows and majestic mountains.</p>
+                <a href="register.html">Book Now</a>
+            </div>
+        </div>
+
+        <h2>Tour Packages</h2>
+        <div class="tour-section">
+            <div class="tour-card">
+                <img src="static/rakaposhi (3).jpg" alt="Weekend Getaway">
+                <h3>Weekend Getaway</h3>
+                <p>Escape the hustle and bustle with a short and sweet weekend trip to Bagrote Valley.</p>
+                <a href="register.html">Book Now</a>
+            </div>
+            <div class="tour-card">
+                <img src="static/image(9).jpg" alt="Family Tour">
+                <h3>Family Tour</h3>
+                <p>Create unforgettable memories with your family in the picturesque Bagrote Valley.</p>
+                <a href="register.html">Book Now</a>
+            </div>
+            <div class="tour-card">
+                <img src="static/ngr (2).jpg" alt="Photography Tour">
+                <h3>Photography Tour</h3>
+                <p>Capture the stunning beauty of Bagrote Valley with our guided photography tour.</p>
+                <a href="register.html">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Bagrote Valley. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+</body>
+</html>

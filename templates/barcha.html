@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcha Meadow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        /* Header and Navigation */
+        header {
+            background-color:rgb(0, 17, 255);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color:rgb(51, 255, 0);
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            animation: slideIn 1s ease-in-out;
+        }
+        header h1:hover {
+            color:rgb(0, 255, 26);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+            transform: translateX(-100%);
+            opacity: 0;
+            }
+            to {
+            transform: translateX(0);
+            opacity: 1;
+            }
+        }
+
+        .clouds {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: url('static/rro.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+            transform: scaleX(-1); /* Mirror the right clouds */
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .background-image {
+            background: url('static/barcha.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        /* Cool and Amazing CSS */
+        .cool-effect {
+            background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8, #845ef7, #5c7cfa, #339af0, #22b8cf, #20c997, #51cf66, #94d82d, #fcc419, #ff922b);
+            background-size: 300% 300%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .welcome-section {
+            margin-top: 20px;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+
+        .details-section {
+            margin-top: 40px;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+            transform: scale(0.5);
+            opacity: 0;
+            }
+            60% {
+            transform: scale(1.2);
+            opacity: 1;
+            }
+            100% {
+            transform: scale(1);
+            }
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .image-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            filter: sepia(1) hue-rotate(180deg);
+        }
+
+
+        /* Cool and Amazing CSS */
+        .welcome-section h1 {
+            font-size: 36px;
+            color: #4CAF50;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .details-section h2 {
+            font-size: 28px;
+            color: #FF5722;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-gallery img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+    }
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        z-index: 3;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    footer a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+        <h1>The Barcha  Meadow</h1>
+    </header>
+    <div class="clouds left"></div>
+    <div class="clouds right"></div>
+    
+    <div class="content">
+        <div class="background-image"></div>
+        <div class="welcome-section">
+            <h1>Welcome to Barcha Meadow</h1>
+            <p>Barcha Meadow is a beautiful place known for its stunning landscapes and serene environment.</p>
+        </div>
+        <div class="details-section">
+            <h2>About Barcha Meadow</h2>
+            <p>Barcha Meadow is a picturesque location that offers breathtaking views and a peaceful atmosphere.</p>
+            <div class="image-gallery">
+                <img src="static/ngr (1).jpg" alt="Barcha Meadow Image 1">
+                <img src="static/ngr (2).jpg" alt="Barcha Meadow Image 2">
+                <img src="static/ngr (3).jpg" alt="Barcha Meadow Image 3">
+                <img src="static/ngr (4).jpg" alt="Barcha Meadow Image 4">
+            </div>
+        </div>
+    </div>
+      <!-- Footer -->
+      <footer>
+        <p>© 2025 Bagrote Valley. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+
+  
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const backgroundImage = document.querySelector('.background-image');
+            const scrollPosition = window.scrollY;
+
+            // Move the background image into view as you scroll
+            if (scrollPosition > 0) {
+                backgroundImage.style.transform = 'translateY(0)';
+            } else {
+                backgroundImage.style.transform = 'translateY(100%)';
+            }
+        });
+    </script>
+</body>
+</html>

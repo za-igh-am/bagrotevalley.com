@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destinations of Bagrote Valley</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+           
+        }
+        /* Header and Navigation */
+        header {
+            background-color: rgb(0, 17, 255);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            color:rgb(98, 255, 0);
+        }
+        header h1 {
+            font-size: 24px;
+            color: #fff;
+        }
+        header h1:hover {
+            color:rgb(43, 255, 0);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        header p,h1:hover:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.3s ease;
+        }
+        /* New Animations and Cool Effects */
+        @keyframes fadeIn {
+            from {
+            opacity: 0;
+            }
+            to {
+            opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+            transform: translateY(-20px);
+            opacity: 0;
+            }
+            to {
+            transform: translateY(0);
+            opacity: 1;
+            }
+        }
+
+        header {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .destination-card {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .destination-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .destination-card a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .destination-card a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: left 0.3s ease;
+        }
+
+        .destination-card a:hover::before {
+            left: 100%;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2 {
+            text-align: center;
+            color: #333;
+
+        }
+        h1,h2:hover {
+            color: #007BFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+
+        }
+       
+        .destination-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .destination-card {
+            flex: 1 1 calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .destination-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .destination-card h3 {
+            margin: 15px 0 10px;
+            color: #007BFF;
+        }
+        .destination-card p {
+            color: #555;
+        }
+        .destination-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .destination-card a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+        <h1>Destinations of Bagrote Valley</h1>
+        </header>
+
+    <div class="container">
+        <h1>Discover the Destinations of Bagrote Valley</h1>
+        <p>Bagrote Valley is home to some of the most breathtaking destinations in the world. From lush green meadows to towering peaks, explore the beauty of Bagrote Valley.</p>
+
+        <h2>Popular Destinations</h2>
+        <div class="destination-section">
+            <div class="destination-card">
+                <img src="static/image (8).jpg" alt="Rakaposhi Peak">
+                <h3>Rakaposhi Peak</h3>
+                <p>One of the most iconic peaks in the region, Rakaposhi offers stunning views and challenging trekking routes.</p>
+                <a href="Rakaposhi.html">Explore More</a>
+            </div>
+            <div class="destination-card">
+                <img src="static/image(15).jpg" alt="Diran Peak">
+                <h3>Diran Peak</h3>
+                <p>Known for its majestic beauty, Diran Peak is a must-visit for adventure enthusiasts and photographers.</p>
+                <a href="diran.html">Explore More</a>
+            </div>
+            <div class="destination-card">
+                <img src="static/image (4).jpg" alt="Malubiting Peak">
+                <h3>Malubiting Peak</h3>
+                <p>Experience the thrill of climbing Malubiting Peak, one of the highest peaks in the region.</p>
+                <a href="working.html">Explore More</a>
+            </div>
+        </div>
+
+        <h2>Activities in Bagrote Valley</h2>
+        <div class="destination-section">
+            <div class="destination-card">
+                <img src="static/image(12).jpg" alt="Trekking">
+                <h3>Trekking</h3>
+                <p>Explore the rugged terrain and scenic trails of Bagrote Valley with our guided trekking tours.</p>
+                <a href="Rakaposhi.html">Learn More</a>
+            </div>
+            <div class="destination-card">
+                <img src="static/image (14).jpg" alt="Camping">
+                <h3>Camping</h3>
+                <p>Spend a night under the stars in the serene meadows of Bagrote Valley.</p>
+                <a href="gargoo.html">Learn More</a>
+            </div>
+            <div class="destination-card">
+                <img src="static/image(13).jpg" alt="Photography">
+                <h3>Photography</h3>
+                <p>Capture the stunning landscapes and vibrant culture of Bagrote Valley with our photography tours.</p>
+                <a href="barcha.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Bagrote Valley. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@bagrotevalley.com">info@bagrotevalley.com</a></p>
+    </footer>
+</body>
+</html>

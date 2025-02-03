@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working on it</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        body {
+            background-image: url('static/clouds.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        
+
+        header a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            text-decoration: none;
+            background: rgb(0, 8, 255);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        header a:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+      
+        .container {
+            text-align: center;
+            background-image: url('static/rro.jpg');
+            backdrop-filter: blur(50%);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container h1 {
+            margin: 0;
+            color: #ff7e5f;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .container h1:hover {
+            color:rgb(26, 29, 7);
+            transform: scale(1.1);
+        }
+        .container p {
+            margin: 10px 0;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .container p:hover {
+            color:rgb(23, 6, 2);
+            transform: translateY(-5px);
+        }
+        .container h2 {
+            margin: 0;
+            color: #ff7e5f;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .container h2:hover {
+            color:rgb(22, 11, 2);
+            transform: scale(1.1);
+        }
+        
+        @keyframes fadeIn {
+            0% {
+            opacity: 0;
+            transform: scale(0.9);
+            }
+            100% {
+            opacity: 1;
+            transform: scale(1);
+            }
+        }
+
+        button {
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color:rgb(69, 9, 248);
+            transform: scale(1.05);
+        }
+        .input-field {
+            margin: 10px 0;
+        }
+        .input-field input, .input-field textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            
+            border-radius: 4px;
+            transition: box-shadow 0.3s ease;
+
+        }
+        .input-field input:focus, .input-field textarea:focus {
+            box-shadow: 0 0 10px rgba(9, 78, 252, 0.5);
+            outline: none;
+        }
+        .contact-info {
+            margin-top: 20px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: #ff7e5f;
+        }
+
+        .contact-info p, .contact-info a {
+            margin: 5px 0;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()">&#8592;Back</a>
+    </header>
+
+    <div class="container">
+        <h1>We are working on this</h1>
+        <p>Thank you for your patience. We are working on this page and will be back soon.</p>
+        <form method="post" action="{{ url_for('submit_info') }}" class="input-field" onsubmit="this.reset();">
+            <h2>Share your information with us</h2>
+            <label for="user-info">Share your information and picture with us:</label>
+            <input type="text" id="user-info" name="user-info" placeholder="Your Name">
+            <textarea id="user-pic" name="user-pic" rows="4" placeholder="Your Information"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        </form>
+        <div class="contact-info">
+            <h2>Developer Contact Information</h2>
+            <p>Email: physzaigham@gmail.com</p>
+            <p>Phone: 03554295018</p>
+            <p>WhatsApp: <a href="https://wa.me/03474336806">Chat with us on WhatsApp</a></p>
+            <p>Website: <a href="https://zaigham018.pythonanywhere.com/">www.developerwebsite.com</a></p>
+            <p>Other Information: Feel free to reach out for any queries.</p>
+        </div>
+    </div>
+</body>
+</html>
